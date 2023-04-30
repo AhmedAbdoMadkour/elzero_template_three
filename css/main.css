@@ -959,6 +959,18 @@ header .container nav ul li:last-of-type .mega_menu .links ul {
     padding: 20px;
 }
 
+@media (max-width:762px) {
+
+
+    .works .container {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    }
+
+    .works .container img {
+        width: 100%;
+    }
+}
+
 .works .container .card_works .work .text_work {
     padding: 20px;
 
