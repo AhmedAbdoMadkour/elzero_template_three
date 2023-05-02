@@ -900,6 +900,12 @@ header .container nav ul li:last-of-type .mega_menu .links ul {
 }
 
 @media (max-width:762px) {
+    .ourskills .container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+        gap: 40px;
+    }
+
     .ourskills .container img {
         display: none;
     }
@@ -928,7 +934,7 @@ header .container nav ul li:last-of-type .mega_menu .links ul {
 .works .container .card_works .work {
     display: flex;
     background-color: #f6f5f5;
-    border: 1px solid white;
+    border: 2px solid white;
     border-radius: 7px;
     align-items: center;
     position: relative;
@@ -944,7 +950,7 @@ header .container nav ul li:last-of-type .mega_menu .links ul {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: #ededed7a;
+    background-color: hsla(0, 0%, 93%, 0.575);
     transition: var(--main-transition);
 }
 
@@ -987,6 +993,84 @@ header .container nav ul li:last-of-type .mega_menu .links ul {
 }
 
 /* end works */
+/* start latest events */
+.events {
+    padding-top: var(--main-padding-top);
+    padding-bottom: var(--main-padding-bottom);
+}
+
+.events .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    gap: 50px;
+    align-items: center;
+    position: relative;
+}
+
+
+.events .container .master_event .time_event {
+    display: flex;
+    justify-content: center;
+
+}
+
+.events .container .master_event .time_event .card_time {
+    border: 1px solid #d4d4d4;
+    margin-left: 10px;
+    text-transform: capitalize;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.events .container .master_event .time_event .card_time h2 {
+    padding: 20px 12px;
+    color: var(--main-color);
+}
+
+.events .container .master_event .time_event .card_time p {
+    padding: 6px 12px;
+    border-top: 1px solid #d4d4d4;
+    font-size: 12px;
+    color: #777;
+}
+
+.events .container .master_event .time_event .card_time:hover,
+.events .container .master_event .time_event .card_time:hover p {
+    border-color: var(--main-color);
+}
+
+.events .container .master_event .text_event h2 {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.events .container .master_event .text_event p {
+    color: #777;
+    line-height: 1.7;
+}
+
+
+.events .container .sub_events {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    background-color: #f6f5f5;
+    width: 300px;
+
+}
+
+@media (max-width:991px) {
+    .events .container img {
+        display: none;
+    }
+
+    .events .container .master_event .time_event .text_event {
+        text-align: center;
+    }
+}
+
+/* end latest events */
 /* start animation */
 
 @keyframes padd_landing {
