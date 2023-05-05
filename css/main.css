@@ -1053,11 +1053,22 @@ header .container nav ul li:last-of-type .mega_menu .links ul {
 .events .container .sub_events {
     position: absolute;
     left: 50%;
-    bottom: 0;
+    bottom: -20%;
     transform: translateX(-50%);
     background-color: #f6f5f5;
     width: 300px;
+    border: 30px solid #f6f5f5;
+    border-radius: 50px;
+}
 
+
+.events .container .sub_events a {
+    text-decoration: none;
+    text-transform: capitalize;
+    background-color: var(--main-color);
+    color: white;
+    font-weight: bold;
+    text-align: end;
 }
 
 @media (max-width:991px) {
@@ -1071,6 +1082,316 @@ header .container nav ul li:last-of-type .mega_menu .links ul {
 }
 
 /* end latest events */
+/* start pricing plans */
+.pricingplans {
+    padding-top: var(--main-padding-top);
+    padding-bottom: var(--main-padding-bottom);
+    background-color: var(--section-background);
+}
+
+.pricingplans .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 40px;
+    text-align: center;
+}
+
+.pricingplans .container .card_pricing {
+    background-color: white;
+    position: relative;
+    box-shadow: 0 0 10px #7777776b;
+}
+
+.pricingplans .container .card_pricing::before {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 50%;
+    top: 0;
+    left: 0;
+    background-color: rgb(0 0 0 / 12%);
+    transition: var(--main-transition);
+
+}
+
+.pricingplans .container .card_pricing::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 50%;
+    bottom: 0;
+    right: 0;
+    background-color: rgb(0 0 0 / 10%);
+    transition: var(--main-transition);
+}
+
+.pricingplans .container .card_pricing:hover:after {
+    width: 100%;
+}
+
+.pricingplans .container .card_pricing:hover::before {
+    width: 100%;
+}
+
+
+
+.pricingplans .container .card_pricing .most {
+    transform: rotate(90deg);
+    background-color: var(--main-color);
+    color: white;
+    padding: 10px;
+    width: 150px;
+    position: absolute;
+    right: -6%;
+    top: 8%;
+    font-weight: bold;
+}
+
+.pricingplans .container .card_pricing .arrow_most {
+    position: absolute;
+    border-width: 19px;
+    border-style: solid;
+    right: 36px;
+    top: 92px;
+    border-color: transparent transparent white;
+}
+
+
+@media (max-width:761px) {
+    .pricingplans .container .card_pricing .arrow_most {
+        right: 34px;
+        top: 93px;
+    }
+}
+
+.pricingplans .container .card_pricing h3 {
+    text-transform: capitalize;
+    padding: 20px;
+    font-size: 22px;
+}
+
+.pricingplans .container .card_pricing img {
+    width: 80px;
+}
+
+.pricingplans .container .card_pricing h4 {
+    font-weight: 700;
+    color: var(--main-color);
+    padding: 20px 20px 0px;
+    font-size: 50px;
+}
+
+.pricingplans .container .card_pricing span {
+    color: #777;
+    text-transform: capitalize;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 20px;
+}
+
+.pricingplans .container .card_pricing ul {
+    text-align: start;
+    text-transform: capitalize;
+}
+
+.pricingplans .container .card_pricing ul li {
+    position: relative;
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-left: 40px;
+}
+
+.pricingplans .container .card_pricing ul li::before {
+    position: absolute;
+    content: "\f00c";
+    font-weight: 900;
+    font-family: 'Font Awesome 5 Free';
+    margin-left: -20px;
+    color: var(--main-color);
+}
+
+.pricingplans .container .card_pricing a {
+    padding: 15px 25px;
+    border: 2px solid var(--main-color);
+    text-decoration: none;
+    font-weight: bold;
+    display: flex;
+    width: fit-content;
+    justify-content: center;
+    border-radius: 10px;
+    color: var(--main-color);
+    text-transform: capitalize;
+    margin: 40px 30%;
+}
+
+/* end pricing plans */
+/* start top video */
+.topvideo {
+    padding-top: var(--main-padding-top);
+    padding-bottom: var(--main-padding-bottom);
+}
+
+.topvideo .container {
+    display: flex;
+    border: 1px solid var(--section-background);
+    padding-left: 0;
+    padding-right: 0;
+}
+
+@media (max-width:991px) {
+    .topvideo .container {
+        flex-direction: column;
+    }
+}
+
+.topvideo .container .list_video .hide_list_video {
+    display: flex;
+    padding: 20px;
+    justify-content: space-between;
+    background-color: #eee
+}
+
+.topvideo .container .list_video .hide_list_video h4 {
+    text-transform: capitalize;
+}
+
+.topvideo .container .list_video .content_list_video {
+    padding: 20px;
+    background-color: white;
+    border-top: 1px solid var(--section-background)
+}
+
+.topvideo .container .list_video .content_list_video p {
+    position: relative;
+    line-height: 1.7;
+    transition: var(--main-transition);
+}
+
+.topvideo .container .list_video .content_list_video:hover p {
+    color: var(--main-color);
+}
+
+.topvideo .container .list_video .content_list_video span {
+    color: #777;
+
+}
+
+.topvideo .container .preview_video {
+    background-color: var(--section-background);
+    position: relative;
+}
+
+.topvideo .container .preview_video img {
+    width: 100%;
+    padding: 10px;
+}
+
+.topvideo .container .preview_video p {
+    position: absolute;
+    bottom: 5px;
+    background-color: white;
+    width: 100%;
+    padding: 20px;
+    border: 10px solid var(--section-background);
+}
+
+/* end top video */
+/* start stats */
+.awesomestats {
+    position: relative;
+    padding-top: var(--main-padding-top);
+    padding-bottom: var(--main-padding-bottom);
+    background-image: url(../image/stats.jpg);
+    background-size: cover;
+}
+
+.awesomestats h1 {
+    text-align: center;
+    position: relative;
+    text-transform: capitalize;
+    padding-bottom: 20px;
+}
+
+.awesomestats::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.95);
+}
+
+.awesomestats .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    text-align: center;
+
+}
+
+.awesomestats .container .card_stats {
+    position: relative;
+    padding: 30px;
+    background-color: white;
+    z-index: 1;
+    line-height: 1.6;
+    opacity: .8;
+}
+
+.awesomestats .container .card_stats:hover {
+    opacity: 1;
+}
+
+.awesomestats .container .card_stats::before {
+    position: absolute;
+    content: "";
+    width: 2px;
+    height: 0;
+    background-color: var(--main-color);
+    left: 0;
+    bottom: 0;
+    transition: 1s;
+}
+
+.awesomestats .container .card_stats::after {
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 0;
+    background-color: var(--main-color);
+    right: 0;
+    top: 0;
+    transition: 1s;
+}
+
+
+.awesomestats .container .card_stats:hover:before {
+    height: 100%;
+}
+
+.awesomestats .container .card_stats:hover::after {
+    height: 100%;
+}
+
+.awesomestats .container .card_stats i {
+    font-size: 30px;
+}
+
+.awesomestats .container .card_stats h3 {
+    font-size: 40px;
+}
+
+.awesomestats .container .card_stats p {
+    font-style: italic;
+    color: var(--main-color);
+    text-transform: capitalize;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+/* end stats */
 /* start animation */
 
 @keyframes padd_landing {
